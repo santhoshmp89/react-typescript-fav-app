@@ -2,7 +2,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default function App():JSX.Element {
+import ToDo from './components/todo';
+
+export default function App():React.ReactNode {
   // const a = 'fdfd';
 
   return (
@@ -12,4 +14,4 @@ export default function App():JSX.Element {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('app-root'));
+ReactDOM.render(<ToDo />, document.getElementById('app-root'));
