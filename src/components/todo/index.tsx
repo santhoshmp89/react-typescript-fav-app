@@ -19,12 +19,13 @@ const ToDo = (): React.ReactNode => {
 
   const handleSubmit = (e: FormEventType) => {
     e.preventDefault();
-    setTodos([...todos, { title: input, completed: false }]);
+    const newTodo: ITodo[] = [...todos, { title: input, completed: false }];
+    setTodos(newTodo);
     setInput('');
   };
 
-  const handleComplete = (index) => {
-    const newState = [...todos.slice(0, index),
+  const handleComplete = (index: number) => {
+    const newState: ITodo[] = [...todos.slice(0, index),
       { ...todos[index], completed: !todos[index].completed },
       ...todos.slice(index + 1),
     ];

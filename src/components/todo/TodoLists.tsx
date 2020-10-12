@@ -19,7 +19,7 @@ const TodoLists = (props: Props):React.ReactNode => {
   return (
     <ul>
       {
-        lists.map((item, index) => (
+        lists.map((item: ITodo, index: number): React.ReactNode => (
           <li key={item.title} style={{ textDecoration: item.completed ? 'line-through' : 'none' }}>
             <input type="checkbox" checked={item.completed} onChange={() => handleComplete(index)} />
             {item.title}
