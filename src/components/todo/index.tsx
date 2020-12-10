@@ -5,8 +5,8 @@ import TodoLists from './TodoLists';
 type FormEventType = React.FormEvent<HTMLInputElement>;
 
 export interface ITodo {
-  title: string
-  completed: boolean
+  title: string;
+  completed: boolean;
 }
 
 const ToDo = (): React.ReactNode => {
